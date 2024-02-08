@@ -1,9 +1,9 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : flex.html
 Assignment  : Lab 4 Exercise C
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : MNathan Mangold, Nolan Thomas
+Submission  : Feb 7th, 2024
 Description : Flex Layouts.
 =========================================================
 -->
@@ -17,6 +17,7 @@ Description : Flex Layouts.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!--
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
@@ -35,6 +36,7 @@ Description : Flex Layouts.
 			border: 1px solid yellow;	
 		}		
 	</style>
+	-->
 
 	<style>
 		/* CSS for menu. You don't need to touch this part */
@@ -69,19 +71,33 @@ Description : Flex Layouts.
         img { max-width: 100%; height: auto; }
         .container { 
 			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: column;
+
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
 			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: row;
 		}
         .main { 
 			padding: 15px; 
 			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			box-sizing: border-box;
 		}
         
         .news-item { padding: 10px; }
         .row { 
 			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			box-sizing: border-box;
+			flex-wrap: wrap;
 		}
         
 
@@ -89,29 +105,52 @@ Description : Flex Layouts.
             .menu { width: 150px; }     
 			.large { 
 				/*I need some CSS codes.*/
+				width: 100%;
+				box-sizing: border-box;
 			}
 			.medium { 
 				/*I need some CSS codes.*/
+				width: 70%;
+				box-sizing: border-box;
 			}
 			.small { 
 				/*I need some CSS codes.*/
+				width: 30%;
+				box-sizing: border-box;
 			 }       
         }
 
         @media screen and (max-width: 768px) {
 			.body { 
-				/*I need some CSS codes.*/
+				/*I need some CSS codes.*/;
+				flex-direction: column;
+
 			}
             .menu ul { 
 				/*I need some CSS codes.*/
+				flex-direction: row;
+				justify-content: space-around;
 			 }            
-            /*I need some CSS codes.*/
+            .large {
+				width: 100%;
+				box-sizing: border-box;
+			}
+			.medium {
+				width: 60%;
+				box-sizing: border-box;
+			}
+			.small {
+				width: 40%;
+				box-sizing: border-box;
+			}
         }
 
         @media screen and (max-width: 480px) {
             .news-item header h1 { font-size: 18px; }
             .medium, .small { 
 				/*I need some CSS codes.*/
+				width: 100%;
+				box-sizing: border-box;
 			 }
         }
     </style>
@@ -170,7 +209,7 @@ Description : Flex Layouts.
 					<!-- Medium news item -->
 					<div class="medium news-item">
 						<header>
-							<h1>Your Name Takes a Historic Spacewalk Near the ISS</h1>
+							<h1>Nathan Takes a Historic Spacewalk Near the ISS</h1>
 						</header>
 						<img src="images/medium.jpg" alt="Medium Image">
 						<article>
@@ -178,7 +217,7 @@ Description : Flex Layouts.
 							<p>In an unprecedented feat of human courage and technological prowess, astronaut Mahdi Ansari completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
 
 							<h3>A Breathtaking Journey</h3>
-							<p>Ansari, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
+							<p>Nathan, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
 
 							<h3>Pushing the Boundaries of Science</h3>
 							<p>The successful spacewalk not only demonstrates human resilience but also advances our understanding of space and our capabilities to explore further into the unknown.</p>
